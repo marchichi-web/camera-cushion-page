@@ -4,39 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>中古カメラ販売とは？流れと向き不向きを整理して確認したい方向けページ</title>
-  <meta name="description" content="中古カメラを仕入れて販売する副業がどんな流れで進むのか、何をするのか、向いている人と合いにくい人の違いを整理して確認できるページです。">
+  <title>中古カメラ販売とは？流れを整理して確認したい方向けページ</title>
+  <meta name="description" content="中古カメラを仕入れて販売する副業がどんな流れで進むのか、何をするのかを整理して確認できるページです。">
 
-  <meta property="og:title" content="中古カメラ販売とは？流れと向き不向きを整理して確認したい方向けページ">
-  <meta property="og:description" content="中古カメラを仕入れて販売する副業がどんな流れで進むのか、何をするのか、向いている人と合いにくい人の違いを整理して確認できるページです。">
+  <meta property="og:title" content="中古カメラ販売とは？流れを整理して確認したい方向けページ">
+  <meta property="og:description" content="中古カメラを仕入れて販売する副業がどんな流れで進むのか、何をするのかを整理して確認できるページです。">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://example.com/camera-resale/">
   <meta property="og:image" content="https://example.com/images/ogp-camera-resale.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="中古カメラ販売とは？流れと向き不向きを整理して確認したい方向けページ">
-  <meta name="twitter:description" content="中古カメラを仕入れて販売する副業がどんな流れで進むのか、何をするのか、向いている人と合いにくい人の違いを整理して確認できるページです。">
+  <meta name="twitter:title" content="中古カメラ販売とは？流れを整理して確認したい方向けページ">
+  <meta name="twitter:description" content="中古カメラを仕入れて販売する副業がどんな流れで進むのか、何をするのかを整理して確認できるページです。">
   <meta name="twitter:image" content="https://example.com/images/ogp-camera-resale.jpg">
 
   <style>
     :root {
       --bg: #f7f9fb;
       --surface: #ffffff;
-      --surface-soft: #f6f8fb;
-      --surface-accent: #eef4f8;
       --text: #1f2933;
       --muted: #5f6c76;
       --line: #dde5ec;
       --line-soft: #e8eef3;
       --accent: #49657d;
       --accent-deep: #355066;
-      --accent-bg: #ecf3f8;
       --shadow-soft: 0 10px 28px rgba(31, 41, 51, 0.05);
       --shadow-card: 0 8px 24px rgba(31, 41, 51, 0.04);
       --max-width: 820px;
       --radius-lg: 18px;
       --radius-md: 14px;
-      --radius-sm: 10px;
     }
 
     * {
@@ -46,6 +42,7 @@
     html {
       font-size: 16px;
       scroll-behavior: smooth;
+      scroll-padding-top: 20px;
     }
 
     body {
@@ -72,7 +69,7 @@
     }
 
     .page-header {
-      padding: 72px 0 40px;
+      padding: 72px 0 32px;
     }
 
     .hero-card {
@@ -107,15 +104,19 @@
     }
 
     .lead {
-      margin: 0;
+      margin: 0 0 18px;
       max-width: 700px;
       color: var(--muted);
       font-size: 1.03rem;
       line-height: 2;
     }
 
+    .lead:last-child {
+      margin-bottom: 0;
+    }
+
     .page-main {
-      padding: 18px 0 84px;
+      padding: 10px 0 84px;
     }
 
     .content-section {
@@ -197,8 +198,8 @@
 
     .flow-list,
     .checkpoint-list,
-    .fit-list {
-      margin: 0 0 24px;
+    .guide-list {
+      margin: 0;
       padding: 20px 22px;
       border: 1px solid var(--line);
       border-radius: var(--radius-md);
@@ -207,7 +208,7 @@
 
     .flow-list li,
     .checkpoint-list li,
-    .fit-list li {
+    .guide-list li {
       position: relative;
       margin: 0;
       padding: 0 0 0 1.55em;
@@ -217,7 +218,7 @@
 
     .flow-list li + li,
     .checkpoint-list li + li,
-    .fit-list li + li {
+    .guide-list li + li {
       margin-top: 13px;
       padding-top: 13px;
       border-top: 1px dashed #dfe6ec;
@@ -225,7 +226,7 @@
 
     .flow-list li::before,
     .checkpoint-list li::before,
-    .fit-list li::before {
+    .guide-list li::before {
       content: "";
       position: absolute;
       top: 0.78em;
@@ -237,12 +238,17 @@
       transform: translateY(-50%);
     }
 
-    .section-fit .fit-list-positive {
-      background: linear-gradient(180deg, #fbfcfd 0%, #f6f9fb 100%);
+    .guide-list a {
+      display: inline-block;
+      color: var(--accent-deep);
+      font-weight: 700;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease, opacity 0.2s ease;
     }
 
-    .section-fit .fit-list-negative {
-      background: linear-gradient(180deg, #fcfcfc 0%, #f8f9fb 100%);
+    .guide-list a:hover {
+      border-color: #adc2d2;
+      opacity: 0.86;
     }
 
     .section-summary .section-card {
@@ -251,7 +257,6 @@
 
     .section-cta {
       padding-top: 28px;
-      border-bottom: none;
     }
 
     .cta-card {
@@ -272,12 +277,6 @@
 
     .section-cta p {
       margin-bottom: 22px;
-    }
-
-    .cta-text {
-      margin-top: 22px;
-      margin-bottom: 0;
-      font-size: 1.01rem;
     }
 
     .cta-actions {
@@ -350,7 +349,7 @@
       }
 
       .page-main {
-        padding: 10px 0 54px;
+        padding: 8px 0 54px;
       }
 
       .content-section + .content-section {
@@ -385,7 +384,7 @@
 
       .flow-list,
       .checkpoint-list,
-      .fit-list {
+      .guide-list {
         padding: 18px 16px;
       }
 
@@ -405,66 +404,76 @@
     <div class="container">
       <div class="hero-card">
         <p class="eyebrow">内容整理ページ</p>
-        <h1 class="page-title">中古カメラを扱う副業は何をするのか。流れと向き不向きを整理して確認したい方向けページ</h1>
+        <h1 class="page-title">中古カメラを扱う副業は何をするのか。流れを整理して確認したい方向けページ</h1>
         <p class="lead">
-          副業の情報を見ても、結局「何をするのか」が見えないまま終わることは少なくありません。
-          このページでは、中古カメラを仕入れて販売する副業が実際にどんな流れで進むのかを、内容先行で整理しています。
+          副業の情報を見ても、<br>
+          何をするのかが見えないまま終わることがあります。
+        </p>
+        <p class="lead">
+          このページでは、<br>
+          中古カメラを仕入れて販売する副業が、どんな流れで進むのかを順番に確認していきます。
         </p>
       </div>
     </div>
   </header>
 
   <main class="page-main">
-    <section class="content-section section-intro">
+    <section class="content-section section-guide">
       <div class="container">
         <div class="section-card">
-          <h2>副業を検討するとき、意外と気になるのは「何をするのか」が見えるかどうか</h2>
+          <h2>このページで確認できること</h2>
+          <ul class="guide-list">
+            <li><a href="#flow">中古カメラを扱う副業の基本的な流れ</a></li>
+            <li><a href="#points">先に見ておきたいポイント</a></li>
+            <li><a href="#next">具体的な内容</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section section-intro" id="intro">
+      <div class="container">
+        <div class="section-card">
+          <h2>副業を検討するとき、気になりやすいのは「何をするのか」が見えるかどうか</h2>
           <p>
-            副業の情報を見ていると、収益や実績の話は目に入っても、実際にどんな作業をするのかまでは見えにくいものがあります。
-            読み進めても、最後まで「結局、自分は何をするのか」がはっきりしないまま終わることも少なくありません。
+            副業の情報を見ていると、<br>
+            実際にどんな作業をするのかまでは見えにくいことがあります。
           </p>
           <p>
-            副業を判断しにくくなる理由は、数字の大きさだけではなく、作業の中身が想像しづらいことにもあります。
-            特に、まだ経験がない段階では、流れが見えないものほど検討しづらくなります。
+            最後まで読んでも、<br>
+            「結局、自分は何をするのか」がはっきりしないまま終わることも少なくありません。
           </p>
           <p>
-            このページでは、利益の話を前に出すのではなく、まず「どんな副業なのか」「何をするのか」が見えやすいかどうか、という視点で内容を整理していきます。
+            副業を判断しにくくなる理由の一つは、<br>
+            作業の中身が想像しづらいことです。
+          </p>
+          <p>
+            特に、まだ経験がない段階では、<br>
+            流れが見えないものほど検討しづらくなります。
+          </p>
+          <p>
+            まず必要なのは、<br>
+            どんな副業なのか、<br>
+            何をするのかが見えることです。
           </p>
         </div>
       </div>
     </section>
 
-    <section class="content-section section-overview">
+    <section class="content-section section-flow" id="flow">
       <div class="container">
         <div class="section-card">
-          <h2>今回紹介しているのは、中古カメラ販売の全体像を把握しやすいタイプの教材です</h2>
+          <h2>中古カメラを扱う副業の流れ</h2>
           <p>
-            今回紹介しているのは、中古カメラ販売をテーマにした副業教材です。
-            ただ、ここで見るべきなのは、単に収益の話だけではありません。
+            中古カメラを仕入れて販売する副業は、<br>
+            流れを分けて見るとイメージしやすくなります。
           </p>
           <p>
-            この教材の特徴として見やすいのは、中古カメラを仕入れて販売する流れを、比較的具体的にイメージしやすいところです。
-            仕入れて終わり、売って終わりではなく、その途中にどんな工程があり、何を見ながら進めていくのかがつかみやすいかどうかがポイントになります。
-          </p>
-          <p>
-            なお、このページでいう「初心者向け」は、簡単という意味ではありません。
-            そうではなく、<strong>何をするかの全体像を把握しやすい</strong> という意味で使っています。
-            ここを曖昧にすると、内容の受け取り方そのものがずれやすくなるため、最初にはっきりさせておきます。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section section-flow">
-      <div class="container">
-        <div class="section-card">
-          <h2>中古カメラを扱う副業は、流れで見ると実務の輪郭がつかみやすくなります</h2>
-          <p>
-            中古カメラ販売という言葉だけを見ると、「中古品を買って売る副業」という印象で止まりやすいかもしれません。
-            ただ、実際にはその間にいくつかの工程があります。
+            いきなり細かい話に入るより、<br>
+            まず全体の流れを見た方が考えやすくなります。
           </p>
 
-          <h3>主な流れのイメージ</h3>
+          <h3>主な流れ</h3>
           <ul class="flow-list">
             <li>仕入れ先を見ながら商品を選ぶ</li>
             <li>状態を確認する</li>
@@ -474,131 +483,95 @@
           </ul>
 
           <p>
-            こうして順番で見ていくと、抽象的な副業話ではなく、「どう動いていく副業なのか」が少しずつ具体的に見えてきます。
+            こうして順番で見ると、<br>
+            何をする副業なのかが少しずつ見えてきます。
           </p>
           <p>
-            ここで大事なのは、作業数の多さを強調することではありません。
-            重要なのは、仕入れから出品、発送までが一本の流れとして見えることです。
-            どこで何をするのかが見えやすいと、副業としての輪郭もつかみやすくなります。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section section-beginner">
-      <div class="container">
-        <div class="section-card">
-          <h2>「初心者向け」といっても、簡単さを意味するわけではありません</h2>
-          <p>
-            副業の文脈で「初心者向け」という言葉が出てくると、つい「簡単そう」「すぐできそう」という意味に受け取られがちです。
-            ただ、この内容に関しては、その受け取り方は少しずれます。
+            大事なのは、<br>
+            作業の多さを強調することではありません。
           </p>
           <p>
-            ここでいう初心者向けとは、難しさがまったくないという意味ではなく、<strong>最初の段階で全体像をつかみやすい</strong> という意味です。
-            何を仕入れ、どう状態を見て、どう整えて、どう販売につなげるのか。
-            その流れが見えやすいことで、未経験の人でも「まず何を理解すればいいのか」が整理しやすくなります。
+            仕入れから出品、発送までが、<br>
+            一本の流れとしてつながっていることです。
           </p>
           <p>
-            逆に言えば、理解しやすいことと、負担がないことは別です。
-            この違いを分けて見ておくと、この副業教材の良さも、向き不向きも判断しやすくなります。
+            どこで何をするのかが見えると、<br>
+            副業としての輪郭もつかみやすくなります。
           </p>
         </div>
       </div>
     </section>
 
-    <section class="content-section section-checkpoints">
+    <section class="content-section section-checkpoints" id="points">
       <div class="container">
         <div class="section-card">
-          <h2>この内容を見るなら、数字より先に「中身の見え方」を確認したいところです</h2>
+          <h2>先に見ておきたいポイント</h2>
           <p>
-            このタイプの副業教材を見るときは、最初から利益の話だけで判断するよりも、内容の見え方を先に確認したほうがズレにくくなります。
-            特に、ここで確認したいのは次のような点です。
+            中古カメラを扱う副業を見るときは、<br>
+            先に流れと判断ポイントを押さえておいた方が考えやすくなります。
+          </p>
+          <p>
+            特に見ておきたいのは次のような点です。
           </p>
 
           <h3>確認しておきたいポイント</h3>
           <ul class="checkpoint-list">
             <li>実務の流れがどこまで具体的に見えるか</li>
             <li>どこで何を見て判断するのかが整理されているか</li>
-            <li>初めて触れる人でも全体像を持ちやすい構成になっているか</li>
+            <li>初めて触れる人でも全体像を持ちやすいか</li>
           </ul>
 
           <p>
-            副業教材の印象は、強い言葉が並んでいることより、「読んだあとに何をするものかが見えるか」で大きく変わります。
-            この内容も、数字の勢いで受け取るより、流れや判断ポイントがどれだけ整理されているか、という視点で見たほうが中身をつかみやすいと思います。
+            副業は、<br>
+            何をするのかが見えるかどうかで、<br>
+            考えやすさが変わります。
+          </p>
+          <p>
+            流れや判断ポイントがどれだけ具体的に見えるか。<br>
+            そこを基準に見た方が考えやすくなります。
           </p>
         </div>
       </div>
     </section>
 
-    <section class="content-section section-fit">
+    <section class="content-section section-summary" id="summary">
       <div class="container">
         <div class="section-card">
-          <h2>向いている人と、期待がずれやすい人は分かれます</h2>
+          <h2>流れや作業の具体性で見ていく</h2>
           <p>
-            この副業教材は、誰にでも同じように合うものとして見るより、相性で考えたほうが自然です。
+            ここまでを見ると、<br>
+            中古カメラを扱う副業は、<br>
+            流れや実務が比較的つかみやすい題材だと分かります。
           </p>
-
-          <h3>向いている人</h3>
-          <ul class="fit-list fit-list-positive">
-            <li>抽象的な説明より、実際の流れが見えるほうが理解しやすい人</li>
-            <li>「何をする副業なのか」を順番で把握したい人</li>
-            <li>作業の中身をある程度見たうえで判断したい人</li>
-            <li>数字だけではなく、中身の具体性で副業を見たい人</li>
-          </ul>
-
-          <h3>期待がずれやすい人</h3>
-          <ul class="fit-list fit-list-negative">
-            <li>できるだけ手を動かさずに進めたい人</li>
-            <li>即金性だけを強く求める人</li>
-            <li>作業工程そのものに抵抗が強い人</li>
-            <li>「楽そうかどうか」を基準に副業を探している人</li>
-          </ul>
-
           <p>
-            大事なのは、良し悪しを一括りにすることではなく、自分がどんな基準で副業を選びたいのかと合っているかを見ることです。
+            副業は、<br>
+            何をするのかが見えるかどうかで、<br>
+            考えやすさが変わります。
+          </p>
+          <p>
+            何をするのかが具体的に見えるかどうかを重視したい人には、<br>
+            考えやすい内容だと思います。
           </p>
         </div>
       </div>
     </section>
 
-    <section class="content-section section-summary">
-      <div class="container">
-        <div class="section-card">
-          <h2>この内容は、「大きな数字」より「何をするかの具体性」で見たほうが分かりやすいです</h2>
-          <p>
-            ここまでを整理すると、このページで紹介している内容の見どころは、強い利益訴求よりも、中古カメラを扱う副業の実務が見えやすい点にあります。
-          </p>
-          <p>
-            副業の紹介には、実績や勢いのある表現が前に出てくるものもあります。
-            それ自体をすべて否定する必要はありませんが、内容を見極めたい立場からすると、最終的に重要なのは「何をするのかが見えるかどうか」です。
-          </p>
-          <p>
-            その意味で、ここで紹介している内容は、夢の大きさよりも作業の輪郭の見えやすさで判断したい人に向いています。
-            数字だけで押される紹介より、まず中身を見てから考えたいという人にとっては、確認しやすいタイプと言えそうです。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section section-cta">
+    <section class="content-section section-cta" id="next">
       <div class="container">
         <div class="cta-card">
-          <h2>中身をもう少し見て判断したい方は、販売ページで確認してみてください</h2>
+          <h2>具体的な内容まで確認したい方は、次のページをご覧ください</h2>
           <p>
-            ここまで、中古カメラを扱う副業をどんな視点で見ると分かりやすいかを整理してきました。
-            このページで伝えたかったのは、「すごそうかどうか」より先に、「何をする副業なのか」が見えるかどうかで判断したほうがズレにくい、ということです。
+            ここまでで、<br>
+            大まかな流れは確認できます。
           </p>
           <p>
-            もし中古カメラ販売というテーマ自体が気になる場合や、実務の流れや判断ポイントがどこまで具体的に整理されているのかをもう少し見てみたい場合は、販売ページで内容を確認してみてください。
-            勢いで決めるというより、<strong>自分に合うかを判断するために中身を見に行く</strong> という入り方のほうが、このページの意図にも合っています。
-          </p>
-
-          <p class="cta-text">
-            <strong>中身を見たうえで判断したい方は、販売ページで詳細を確認してみてください。</strong>
+            次のページでは、<br>
+            もう少し細かい内容を見ながら、<br>
+            具体的な流れを見ていきます。
           </p>
 
           <div class="cta-actions">
-            <a class="cta-button" href="https://www.infotop.jp/click.php?aid=367440&iid=105282" rel="sponsored">販売ページを確認する</a>
+            <a class="cta-button" href="https://www.infotop.jp/click.php?aid=367440&iid=105282" rel="sponsored">具体的な内容を見る</a>
           </div>
         </div>
       </div>
