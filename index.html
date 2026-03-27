@@ -4,19 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>中古カメラ販売の流れを整理して確認するページ</title>
-  <meta name="description" content="中古カメラを仕入れて販売する副業がどんな流れで進むのか、何をするのかを整理して確認できるページです。">
+  <title>中古カメラ販売を考えるときに、流れと判断ポイントを確認するページ</title>
+  <meta
+    name="description"
+    content="中古カメラ販売の流れを具体例として見ながら、どこで何を確認するのか、自分でも進められそうかを考えやすくするページです。"
+  />
 
-  <meta property="og:title" content="中古カメラ販売の流れを整理して確認するページ">
-  <meta property="og:description" content="中古カメラを仕入れて販売する副業がどんな流れで進むのか、何をするのかを整理して確認できるページです。">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://example.com/camera-resale/">
-  <meta property="og:image" content="https://example.com/images/ogp-camera-resale.jpg">
+  <meta property="og:title" content="中古カメラ販売を考えるときに、流れと判断ポイントを確認するページ" />
+  <meta
+    property="og:description"
+    content="中古カメラ販売の流れを具体例として見ながら、どこで何を確認するのか、自分でも進められそうかを考えやすくするページです。"
+  />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://camera-cushion-page.marchichi-web.workers.dev/" />
+  <meta property="og:image" content="https://camera-cushion-page.marchichi-web.workers.dev/ogp.jpg" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="中古カメラ販売の流れを整理して確認するページ">
-  <meta name="twitter:description" content="中古カメラを仕入れて販売する副業がどんな流れで進むのか、何をするのかを整理して確認できるページです。">
-  <meta name="twitter:image" content="https://example.com/images/ogp-camera-resale.jpg">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="中古カメラ販売を考えるときに、流れと判断ポイントを確認するページ" />
+  <meta
+    name="twitter:description"
+    content="中古カメラ販売の流れを具体例として見ながら、どこで何を確認するのか、自分でも進められそうかを考えやすくするページです。"
+  />
+  <meta name="twitter:image" content="https://camera-cushion-page.marchichi-web.workers.dev/ogp.jpg" />
 
   <style>
     :root {
@@ -105,7 +114,7 @@
 
     .lead {
       margin: 0 0 18px;
-      max-width: 700px;
+      max-width: 720px;
       color: var(--muted);
       font-size: 1.03rem;
       line-height: 2;
@@ -127,7 +136,8 @@
       margin-top: 22px;
     }
 
-    .section-card {
+    .section-card,
+    .cta-card {
       position: relative;
       background: var(--surface);
       border: 1px solid var(--line-soft);
@@ -136,7 +146,8 @@
       box-shadow: var(--shadow-card);
     }
 
-    .section-card::before {
+    .section-card::before,
+    .cta-card::before {
       content: "";
       position: absolute;
       top: 0;
@@ -170,10 +181,9 @@
     }
 
     h3 {
-      margin: 34px 0 16px;
-      font-size: 1.06rem;
-      line-height: 1.8;
-      font-weight: 700;
+      margin: 0 0 12px;
+      font-size: 1.08rem;
+      line-height: 1.75;
       color: var(--accent-deep);
     }
 
@@ -185,20 +195,15 @@
       margin-bottom: 0;
     }
 
-    strong {
-      font-weight: 700;
-      color: #22313f;
-    }
-
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
     }
 
-    .flow-list,
-    .checkpoint-list,
-    .guide-list {
+    .guide-list,
+    .point-list,
+    .flow-list {
       margin: 0;
       padding: 20px 22px;
       border: 1px solid var(--line);
@@ -206,9 +211,9 @@
       background: linear-gradient(180deg, #fbfcfd 0%, #f7fafc 100%);
     }
 
-    .flow-list li,
-    .checkpoint-list li,
-    .guide-list li {
+    .guide-list li,
+    .point-list li,
+    .flow-list li {
       position: relative;
       margin: 0;
       padding: 0 0 0 1.55em;
@@ -216,17 +221,17 @@
       line-height: 1.95;
     }
 
-    .flow-list li + li,
-    .checkpoint-list li + li,
-    .guide-list li + li {
+    .guide-list li + li,
+    .point-list li + li,
+    .flow-list li + li {
       margin-top: 13px;
       padding-top: 13px;
       border-top: 1px dashed #dfe6ec;
     }
 
-    .flow-list li::before,
-    .checkpoint-list li::before,
-    .guide-list li::before {
+    .guide-list li::before,
+    .point-list li::before,
+    .flow-list li::before {
       content: "";
       position: absolute;
       top: 0.78em;
@@ -251,42 +256,21 @@
       opacity: 0.86;
     }
 
-    .section-summary .section-card {
-      background: linear-gradient(180deg, #ffffff 0%, #fbfcfd 100%);
-    }
-
-    .section-cta {
-      padding-top: 28px;
-    }
-
     .cta-card {
       background: linear-gradient(180deg, #f7fafc 0%, #f1f6fa 100%);
       border: 1px solid #d8e3eb;
-      border-radius: 22px;
-      padding: 40px 34px;
       box-shadow: 0 12px 30px rgba(31, 41, 51, 0.06);
     }
 
-    .section-cta h2 {
-      margin-bottom: 20px;
-    }
-
-    .section-cta h2::before {
-      background: linear-gradient(180deg, #58758d 0%, #88a0b3 100%);
-    }
-
-    .section-cta p {
-      margin-bottom: 22px;
-    }
-
     .cta-actions {
-      margin-top: 30px;
+      margin-top: 28px;
     }
 
     .cta-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      width: 100%;
       min-height: 52px;
       padding: 15px 26px;
       border: 1px solid #bfd0de;
@@ -311,11 +295,6 @@
       transform: translateY(-1px);
     }
 
-    .cta-button:focus-visible {
-      outline: 2px solid #9fb4c9;
-      outline-offset: 2px;
-    }
-
     .page-footer {
       padding: 38px 0 48px;
       color: var(--muted);
@@ -332,7 +311,9 @@
         padding: 46px 0 24px;
       }
 
-      .hero-card {
+      .hero-card,
+      .section-card,
+      .cta-card {
         padding: 28px 20px;
         border-radius: 18px;
       }
@@ -356,11 +337,6 @@
         margin-top: 16px;
       }
 
-      .section-card {
-        padding: 28px 20px;
-        border-radius: 16px;
-      }
-
       h2 {
         padding-left: 13px;
         margin-bottom: 20px;
@@ -373,28 +349,14 @@
         height: 1.32em;
       }
 
-      h3 {
-        margin-top: 30px;
-        margin-bottom: 14px;
-      }
-
       p {
         margin-bottom: 20px;
       }
 
-      .flow-list,
-      .checkpoint-list,
-      .guide-list {
+      .guide-list,
+      .point-list,
+      .flow-list {
         padding: 18px 16px;
-      }
-
-      .cta-card {
-        padding: 30px 20px;
-        border-radius: 18px;
-      }
-
-      .cta-button {
-        width: 100%;
       }
     }
   </style>
@@ -403,15 +365,17 @@
   <header class="page-header">
     <div class="container">
       <div class="hero-card">
-        <p class="eyebrow">内容整理ページ</p>
-        <h1 class="page-title">中古カメラ販売の流れを整理して確認するページ</h1>
+        <p class="eyebrow">具体例ページ</p>
+        <h1 class="page-title">中古カメラ販売を考えるときに、流れと判断ポイントを確認するページ</h1>
         <p class="lead">
-          副業の情報を見ても、<br>
-          何をするのかが見えないまま終わることがあります。
+          中古カメラ販売に興味があっても、<br>
+          流れだけ見えて、どこで何を判断するのかが分からないと、<br>
+          自分でも進められそうかは考えにくいです。
         </p>
         <p class="lead">
           このページでは、<br>
-          中古カメラを仕入れて販売する副業が、どんな流れで進むのかを順番に確認していきます。
+          中古カメラ販売の流れを具体例として見ながら、<br>
+          どこで何を確認するのかを整理していきます。
         </p>
       </div>
     </div>
@@ -423,56 +387,27 @@
         <div class="section-card">
           <h2>このページで確認できること</h2>
           <ul class="guide-list">
-            <li><a href="#flow">中古カメラを扱う副業の基本的な流れ</a></li>
-            <li><a href="#points">先に見ておきたいポイント</a></li>
-            <li><a href="#next">具体的な内容</a></li>
+            <li><a href="#flow">中古カメラ販売の基本的な流れ</a></li>
+            <li><a href="#points">どこで何を確認するのか</a></li>
+            <li><a href="#fit">自分でも進められそうかを見るポイント</a></li>
+            <li><a href="#next">次に確認する内容</a></li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="content-section section-intro" id="intro">
+    <section class="content-section" id="flow">
       <div class="container">
         <div class="section-card">
-          <h2>副業選びは、何をするのかが見えるかどうか</h2>
+          <h2>中古カメラ販売は、流れで見ると作業の輪郭がつかみやすくなります</h2>
           <p>
-            副業の情報を見ていると、<br>
-            実際にどんな作業をするのかまでは見えにくいことがあります。
+            中古カメラ販売という言葉だけを見ると、<br>
+            中古品を買って売る副業、という印象で止まりやすいです。
           </p>
           <p>
-            「結局、自分は何をするのか」がはっきりしないまま終わることも少なくありません。
-          </p>
-          <p>
-            副業を判断しにくくなる理由の一つは、<br>
-            作業の中身が想像しづらいことです。
-          </p>
-          <p>
-            特に、まだ経験がない段階では、<br>
-            流れが見えないものほど検討しづらくなります。
-          </p>
-          <p>
-            まず必要なのは、<br>
-            どんな副業なのか、<br>
-            何をするのかが見えることです。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section section-flow" id="flow">
-      <div class="container">
-        <div class="section-card">
-          <h2>中古カメラを扱う副業の流れ</h2>
-          <p>
-            中古カメラを仕入れて販売する副業は、<br>
-            流れを分けて見るとイメージしやすくなります。
-          </p>
-          <p>
-            いきなり細かい話に入るより、<br>
-            まず全体の流れを見た方が考えやすくなります。
+            ただ、実際にはその間にいくつかの工程があります。
           </p>
 
-          <h3>主な流れ</h3>
           <ul class="flow-list">
             <li>仕入れ先を見ながら商品を選ぶ</li>
             <li>状態を確認する</li>
@@ -482,66 +417,91 @@
           </ul>
 
           <p>
-            こうして順番で見ると、<br>
-            何をする副業なのかが少しずつ見えてきます。
+            こうして順番で見ていくと、<br>
+            何をする副業なのかが少しずつ見えやすくなります。
           </p>
           <p>
-            仕入れから出品、発送までが、<br>
-            一本の流れとしてつながっていることです。
-          </p>
-          <p>
-            どこで何をするのかが見えると、<br>
-            副業としての輪郭もつかみやすくなります。
+            最初に流れが見えると、<br>
+            自分がどの作業をやることになるのかも考えやすくなります。
           </p>
         </div>
       </div>
     </section>
 
-    <section class="content-section section-checkpoints" id="points">
+    <section class="content-section" id="points">
       <div class="container">
         <div class="section-card">
-          <h2>先に見ておきたいポイント</h2>
+          <h2>判断しやすいのは、流れの中で何をどう進めるのかが見えるときです</h2>
           <p>
-            中古カメラを扱う副業を見るときは、<br>
-            先に流れと判断ポイントを押さえておいた方が考えやすくなります。
+            流れが見えるだけでは、まだ足りません。
           </p>
           <p>
-            特に見ておきたいのは次のような点です。
+            中古カメラ販売を考えるときに大事なのは、<br>
+            その流れの中で、何を見て、どう進めていくのかが見えることです。
           </p>
 
-          <h3>確認しておきたいポイント</h3>
-          <ul class="checkpoint-list">
-            <li>実務の流れがどこまで具体的に見えるか</li>
-            <li>どこで何を見て判断するのかが整理されているか</li>
-            <li>初めて触れる人でも全体像を持ちやすいか</li>
+          <ul class="point-list">
+            <li>どこの仕入れ先で、どんな商品を見るのか</li>
+            <li>商品の状態をどのように確認するのか</li>
+            <li>どのように整えるのか</li>
+            <li>どこで、どう出品まで進めるのか</li>
+            <li>どう発送まで含めて動いていくのか</li>
           </ul>
 
           <p>
-            副業は、<br>
-            何をするのかが見えるかどうかで、<br>
-            考えやすさが変わります。
+            このあたりが見えてくると、<br>
+            何となく流れが分かるだけではなく、<br>
+            自分でも進められそうかを考えやすくなります。
           </p>
           <p>
-            流れや判断ポイントがどれだけ具体的に見えるか。<br>
-            そこを基準に見た方が考えやすくなります。
+            ただ工程を眺めるだけでなく、<br>
+            それぞれの流れの中で何を見ているのかを意識すると、<br>
+            どこが判断ポイントになるのかも見えやすくなります。
+          </p>
+          <p>
+            逆に、<br>
+            何を見て、どう進めるのかが曖昧なままだと、<br>
+            流れが見えたようで、実際には判断しにくいままになりやすいです。
           </p>
         </div>
       </div>
     </section>
 
-    <section class="content-section section-summary" id="summary">
+    <section class="content-section" id="fit">
       <div class="container">
         <div class="section-card">
-          <h2>流れや作業の具体性で見ていく</h2>
+          <h2>中古カメラ販売で気になるのは、続けられそうかと回収できそうかです</h2>
           <p>
-            ここまでを見ると、<br>
-            中古カメラを扱う副業は、<br>
-            流れや実務が比較的つかみやすいです。
+            中古カメラ販売に興味がある人が、<br>
+            実際に気になるのは流れそのものだけではないと思います。
           </p>
           <p>
-            副業は、<br>
-            何をするのかが見えるかどうかで、<br>
-            考えやすさが変わります。
+            本当に知りたいのは、
+          </p>
+
+          <ul class="point-list">
+            <li>自分でも進めていけそうか</li>
+            <li>収益化まで持っていけそうか</li>
+            <li>払った分を回収できそうか</li>
+          </ul>
+
+          <p>
+            その判断をするには、<br>
+            やはり流れと確認ポイントが見えることが大事です。
+          </p>
+          <p>
+            何をするのかが曖昧なままだと、<br>
+            自分に合うかも、続けられそうかも、<br>
+            かなり考えにくくなります。
+          </p>
+          <p>
+            逆に、<br>
+            どんな流れで進み、どこで何を確認するのかが見えると、<br>
+            自分でも回せそうかどうかを考えやすくなります。
+          </p>
+          <p>
+            続けられそうかや回収できそうかを考えるときは、<br>
+            返金保証の有無や条件も、見ておきたい判断材料の一つです。
           </p>
         </div>
       </div>
@@ -550,19 +510,31 @@
     <section class="content-section section-cta" id="next">
       <div class="container">
         <div class="cta-card">
-          <h2>具体的な内容まで確認したい方は、次のページをご覧ください</h2>
+          <h2>次は、この見方を使って、より具体的な内容を確認していけます</h2>
           <p>
             ここまでで、<br>
-            大まかな流れは確認できます。
+            中古カメラ販売がどんな流れで進み、<br>
+            どこで何を確認するのかは見えやすくなります。
           </p>
           <p>
-            次のページでは、<br>
-            もう少し細かい内容を見ながら、<br>
-            具体的な流れを見ていきます。
+            ただ、ここで終わりではなく、<br>
+            次はこの見方を踏まえて、<br>
+            より具体的な内容を確認しながら判断していきます。
+          </p>
+          <p>
+            流れと判断ポイントを見たうえで次に進むと、<br>
+            自分でも進められそうか、<br>
+            さらに考えやすくなります。
           </p>
 
           <div class="cta-actions">
-            <a class="cta-button" href="https://www.infotop.jp/click.php?aid=367440&iid=105282" rel="sponsored">具体的な内容を見る</a>
+            <a
+              class="cta-button"
+              href="https://www.infotop.jp/click.php?aid=367440&iid=105282"
+              rel="sponsored"
+            >
+              もっと具体的な内容を確認する
+            </a>
           </div>
         </div>
       </div>
